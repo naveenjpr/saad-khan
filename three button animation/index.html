@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          dropShadow: {
+        '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
+        '4xl': [
+            '0 35px 35px rgba(0, 0, 0, 0.25)',
+            '0 45px 65px rgba(0, 0, 0, 0.15)'
+        ]
+      }
+        }
+      }
+    }
+  </script>
+  
+
+  <body>
+    <div class="w-[100%]">
+      <div
+        class="max-w-[300px] mx-auto grid grid-cols-3 gap-[5px] items-center h-screen justify-items-center"
+      >
+        <button
+          class="rounded border hover:border-hidden px-[20px] py-[5px] transition duration-1000 ease-in-out hover:shadow-lg hover:text-emerald-300 hover:shadow-emerald-300 mx-[15px]"
+        >
+          button
+        </button>
+        <button
+          class="rounded border hover:border-hidden px-[20px] py-[5px] transition duration-1000 ease-in-out hover:shadow-lg hover:text-cyan-500/50 hover:shadow-cyan-500/50 mx-[15px]"
+          onclick="addData()"
+          id="div2"
+        >
+          button
+        </button>
+        <button
+          class="rounded border hover:border-hidden px-[20px] py-[5px] transition duration-1000 ease-in-out hover:shadow-lg hover:text-purple-400 hover:shadow-purple-400 mx-[15px]"
+        >
+          button
+        </button>
+      </div>
+      
+    </div>
+  </body>
+  <script>
+    var secondDiv = document.querySelector("div");
+    let secondDiv2 = document.querySelector("#div2");
+    secondDiv.addEventListener("click", function () {
+      secondDiv.style.background = "black";
+    });
+  </script>
+</html>
